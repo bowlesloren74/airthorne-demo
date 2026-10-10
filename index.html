@@ -4,290 +4,552 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Airthorne Heating &amp; Air | HVAC in Beckley, WV</title>
-<meta name="description" content="Airthorne Heating &amp; Air: AC and heating installation, repair and maintenance in Beckley and southern West Virginia. NATE-certified technicians and upfront pricing.">
+<meta name="description" content="Airthorne Heating &amp; Air: local AC and heating installation, repair and maintenance in Beckley and southern West Virginia. NATE-certified technicians, upfront pricing, 24/7 emergency service.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Airthorne Heating &amp; Air">
-<meta property="og:description" content="Comfort, engineered. Premium HVAC for southern West Virginia.">
-<meta property="og:image" content="images/hero-handshake.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' fill='%230B141B'/%3E%3Ccircle cx='14' cy='14' r='10' stroke='%23B8935A' stroke-width='1.6' fill='none'/%3E%3Cpath d='M14 7v7' stroke='%23B8935A' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:description" content="Local heating and cooling for Beckley and the New River Valley.">
+<meta property="og:image" content="images/slide-van.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312263A'/%3E%3Cpath d='M16 7v9' stroke='%23F07B3F' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M10.5 11.5a8 8 0 1 0 11 0' stroke='%234FA3E8' stroke-width='2.4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap">
 <style>
-body{margin:0;background:#F4F1EB}
-a{color:#0B141B}a:hover{color:#7A5C2E}
-input,select,textarea,button{font-family:inherit}
-.zoom{overflow:hidden}
-.zoom img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
-.zoom:hover img{transform:scale(1.04)}
-.navlink{color:#E6E0D4;text-decoration:none;transition:color .3s}
-.navlink:hover{color:#FFFFFF}
-.ulink{text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:100% 1px;background-repeat:no-repeat;background-position:0 100%;padding-bottom:6px;transition:background-size .4s}
-.ulink:hover{background-size:0 1px;background-position:100% 100%}
-.field{border:none;border-bottom:1px solid #9A9284;background:transparent;padding:14px 0;font-size:16px;color:#0B141B;outline:none;transition:border-color .3s}
-.field:focus{border-bottom-color:#0B141B}
+:root{
+  --navy:#12263A; --navy-2:#1B3550; --ink:#14202B; --body:#3E4A55; --muted:#6A7580;
+  --paper:#F7F4EF; --paper-2:#EFEAE2; --line:#DCD5CA; --white:#FFFFFF;
+  --heat:#E8672A; --heat-dark:#B84A14; --cool:#2F7FC9; --cool-dark:#1F5E99;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:96px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;font-size:18px;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:'Archivo',system-ui,sans-serif;margin:0;letter-spacing:-0.015em;line-height:1.08}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--heat-dark)}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--heat)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-family:'Archivo',sans-serif;font-weight:700;font-size:16px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-heat{background:var(--heat);color:#fff}
+.btn-heat:hover{background:var(--heat-dark);color:#fff}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2);color:#fff}
+.icon{width:22px;height:22px;flex:none}
+
+/* emergency bar */
+.alert{background:var(--navy);color:#E9EEF3;font-size:15px}
+.alert .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 24px;padding-top:10px;padding-bottom:10px}
+.alert strong{color:#fff}
+.alert a{color:#FFB48A;font-weight:600;text-decoration:none}
+.alert a:hover{text-decoration:underline}
+.pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:#3DDC84;margin-right:8px;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+
+/* nav */
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 28px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
+.logo b{font-family:'Archivo',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.02em;display:block;line-height:1}
+.logo small{display:block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.links{display:flex;flex-wrap:wrap;gap:6px 26px;font-family:'Archivo',sans-serif;font-weight:600;font-size:15px}
+.links a{text-decoration:none;color:var(--body)}
+.links a:hover{color:var(--heat-dark)}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.nav-phone{font-family:'Archivo',sans-serif;font-weight:700;text-decoration:none;color:var(--navy);display:flex;align-items:center;gap:8px}
+
+/* hero slider */
+.hero{position:relative;height:clamp(560px,72vh,740px);overflow:hidden;background:var(--navy);color:#fff}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1s ease,visibility 1s}
+.slide.is-active{opacity:1;visibility:visible}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 7s ease-out}
+.slide.is-active img{transform:scale(1)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,28,43,.9) 0%,rgba(13,28,43,.78) 34%,rgba(13,28,43,.25) 62%,rgba(13,28,43,0) 80%)}
+.slide .wrap{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center}
+.slide .tag{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.14);backdrop-filter:blur(6px)}
+.slide .tag i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.slide h1,.slide h2{font-size:clamp(40px,5.6vw,72px);font-weight:800;max-width:640px;margin-top:22px}
+.slide p{max-width:500px;font-size:20px;color:#DCE4EC;margin:22px 0 0}
+.slide .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.slider-ui{position:absolute;z-index:3;left:0;right:0;bottom:28px}
+.slider-ui .wrap{display:flex;align-items:center;gap:14px}
+.dots{display:flex;gap:10px}
+.dot{width:44px;height:44px;border:0;background:transparent;padding:0;cursor:pointer;display:flex;align-items:center}
+.dot span{display:block;width:100%;height:4px;border-radius:2px;background:rgba(255,255,255,.35);overflow:hidden}
+.dot span::after{content:"";display:block;height:100%;width:0;background:#fff}
+.dot[aria-current="true"] span::after{width:100%;transition:width 6.5s linear}
+.hero.paused .dot[aria-current="true"] span::after{width:100%;transition:none}
+.arrows{margin-left:auto;display:flex;gap:10px}
+.arrow{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(255,255,255,.55);background:rgba(13,28,43,.35);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.arrow:hover{background:#fff;color:var(--navy)}
+
+/* trust row */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px 28px;padding-top:26px;padding-bottom:26px}
+.trust div{display:flex;align-items:center;gap:14px;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;color:var(--navy);line-height:1.25}
+.trust small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:400;font-size:14px;color:var(--muted)}
+.badge{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.b-heat{background:#FDEBE1;color:var(--heat-dark)}
+.b-cool{background:#E3EFFA;color:var(--cool-dark)}
+
+section{padding:104px 0}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px;margin-bottom:52px}
+.head h2{font-size:clamp(34px,4vw,52px);font-weight:800;margin-top:14px;max-width:680px}
+.head p{max-width:440px;color:var(--body);margin:0}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(18,38,58,.35)}
+.card .ph{aspect-ratio:4/3;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card:hover .ph img{transform:scale(1.05)}
+.card .bd{padding:24px 24px 28px;display:flex;flex-direction:column;gap:10px;flex:1}
+.chip{align-self:flex-start;font-family:'Archivo',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.chip-heat{background:#FDEBE1;color:var(--heat-dark)}
+.chip-cool{background:#E3EFFA;color:var(--cool-dark)}
+.chip-navy{background:#E6EAEF;color:var(--navy)}
+.card h3{font-size:23px;font-weight:700}
+.card p{margin:0;color:var(--body);font-size:17px}
+.card a.more{margin-top:auto;padding-top:10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:15px;color:var(--navy);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.card a.more:hover{color:var(--heat-dark)}
+
+/* seasonal */
+.season{background:var(--navy);color:#fff;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.season .tx{padding:56px 52px}
+.season h2{font-size:clamp(32px,3.6vw,46px);font-weight:800;margin-top:16px}
+.season p{color:#C9D4DE;margin:18px 0 0}
+.season ul{list-style:none;padding:0;margin:26px 0 34px;display:grid;gap:12px}
+.season li{display:flex;gap:12px;align-items:flex-start;color:#E9EEF3}
+.season li svg{color:#FF9C6B;margin-top:3px}
+.season .eyebrow{color:#FFB48A}
+.season .ph{min-height:320px}
+.season .ph img{width:100%;height:100%;object-fit:cover;object-position:25% center}
+
+/* why / about */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:center}
+.why .ph{border-radius:22px;overflow:hidden;aspect-ratio:5/4}
+.why .ph img{width:100%;height:100%;object-fit:cover;object-position:70% center}
+.why h2{font-size:clamp(34px,4vw,50px);font-weight:800;margin-top:14px}
+.why p{color:var(--body)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.stat b{display:block;font-family:'Archivo',sans-serif;font-size:36px;font-weight:800;color:var(--navy);line-height:1}
+.stat span{display:block;margin-top:8px;font-size:15px;color:var(--muted);line-height:1.3}
+
+/* reviews */
+.reviews-bg{background:var(--paper-2)}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.review{background:#fff;border-radius:var(--radius);padding:30px 28px;border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.stars{display:flex;gap:3px;color:#F2A93B}
+.review h3{font-size:20px;font-weight:700}
+.review p{margin:0;color:var(--body);font-size:17px}
+.who{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);display:flex;align-items:center;gap:12px;font-size:15px}
+.av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:700;color:#fff;flex:none}
+.who b{display:block;font-family:'Archivo',sans-serif;font-size:15px}
+.who small{color:var(--muted);font-size:14px}
+.rating-pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-family:'Archivo',sans-serif;font-weight:700;color:var(--navy)}
+
+/* area + faq */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.towns span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600;font-size:16px;color:var(--navy);display:inline-flex;align-items:center;gap:8px}
+.towns span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cool)}
+.area-note{margin-top:22px;color:var(--body);font-size:17px}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:0 24px;margin-bottom:12px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:var(--navy)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;font-weight:500;color:var(--heat);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 22px;color:var(--body);font-size:17px}
+
+/* contact */
+.contact{background:var(--navy);color:#fff}
+.contact .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px}
+.contact h2{font-size:clamp(36px,4.4vw,56px);font-weight:800;margin-top:14px}
+.contact .eyebrow{color:#FFB48A}
+.contact p.lead{color:#C9D4DE;max-width:440px}
+.big-phone{display:inline-flex;align-items:center;gap:14px;margin-top:26px;font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(30px,3.4vw,42px);text-decoration:none;color:#fff}
+.big-phone:hover{color:#FFB48A}
+.info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:36px;font-size:16px;color:#E3E9EF}
+.info b{display:block;font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#93A4B5;margin-bottom:4px}
+form.quote{background:#fff;color:var(--ink);border-radius:22px;padding:40px;display:grid;gap:18px;align-self:start}
+form.quote h3{font-size:26px;font-weight:800;color:var(--navy)}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f label{font-family:'Archivo',sans-serif;font-weight:600;font-size:14px;color:var(--navy)}
+.f input,.f select,.f textarea{font:inherit;font-size:17px;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--cool);background:#fff}
+.seg{display:flex;flex-wrap:wrap;gap:10px}
+.seg label{flex:1;min-width:120px;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;color:var(--navy)}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg input:checked+label{border-color:var(--heat);background:#FDF1EA}
+.seg input:focus-visible+label{outline:2px solid var(--cool);outline-offset:2px}
+form.quote small{color:var(--muted);font-size:14px}
+
+footer{background:#0C1B29;color:#AFBCC8;font-size:16px}
+footer .top{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;padding:72px 0 48px}
+footer h4{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#7F93A6;margin-bottom:14px}
+footer p{margin:0;line-height:1.9}
+footer .bottom{border-top:1px solid #1E3247;padding:22px 0 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:#7F93A6}
+footer .logo{color:#fff}
+footer .logo small{color:#7F93A6}
+
+.mobile-call{display:none}
+@media (max-width:760px){
+  body{font-size:17px}
+  section{padding:72px 0}
+  .wrap{padding:0 20px}
+  .links{display:none}
+  .nav .wrap{flex-wrap:nowrap}
+  .nav .btn{min-height:44px;padding:0 18px;font-size:15px}
+  .nav-cta{gap:12px}
+  .nav-phone{display:none}
+  .nav-phone span{display:none}
+  .logo b{font-size:21px}
+  .logo small{font-size:10px;letter-spacing:.12em;white-space:nowrap}
+  .nav .btn{white-space:nowrap}
+  .alert .wrap{font-size:14px}
+  .slide .btn-ghost{display:none}
+  .hero{height:640px}
+  .slide::after{background:linear-gradient(0deg,rgba(13,28,43,.95) 0%,rgba(13,28,43,.8) 50%,rgba(13,28,43,.3) 100%)}
+  .slide .wrap{justify-content:flex-end;padding-bottom:110px}
+  .arrows{display:none}
+  .season .tx{padding:40px 26px}
+  form.quote{padding:28px 22px}
+  .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stat{padding:14px}
+  .stat b{font-size:28px}
+  .mobile-call{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;box-shadow:0 10px 30px -8px rgba(0,0,0,.45)}
+  footer{padding-bottom:70px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .slide img{transform:none!important}
+}
 </style>
-<style>html{scroll-behavior:smooth}*{box-sizing:border-box}img{max-width:100%}
-@media (max-width:720px){header nav{gap:20px!important}section,footer>div{padding-left:20px!important;padding-right:20px!important}form{padding:40px 24px!important}}</style>
 </head>
 <body>
-<div style="font-family: 'Manrope', system-ui, sans-serif; font-weight: 400; color: #0B141B; background: #F4F1EB; font-size: 17px; line-height: 1.7; letter-spacing: 0.005em">
 
-<!-- HERO with overlaid nav -->
-<section id="top" style="position: relative; overflow: hidden; background: #0B141B; color: #F4F1EB; min-height: 920px; display: flex; flex-direction: column">
-<img src="images/hero-handshake.jpg" alt="An Airthorne technician shaking hands with a homeowner beside a newly installed outdoor unit" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% center">
-<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,20,27,0.94) 0%, rgba(11,20,27,0.8) 38%, rgba(11,20,27,0.3) 72%, rgba(11,20,27,0.15) 100%)"></div>
-<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 240px; background: linear-gradient(0deg, rgba(11,20,27,0.85), rgba(11,20,27,0))"></div>
+<div class="alert">
+  <div class="wrap">
+    <span><span class="pulse" aria-hidden="true"></span><strong>Heat out? AC down?</strong> A real person answers, 24 hours a day.</span>
+    <a href="tel:+13045550199">Emergency line: (304) 555-0199</a>
+  </div>
+</div>
 
-<header style="position: relative; border-bottom: 1px solid rgba(244,241,235,0.14)">
-<div style="max-width: 1360px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
-<a href="#top" style="display: flex; align-items: center; gap: 14px; color: #F4F1EB; text-decoration: none">
-<svg width="30" height="30" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="12.5" stroke="#B8935A" stroke-width="1.2"></circle><path d="M14 6v8" stroke="#B8935A" stroke-width="1.2" stroke-linecap="round"></path><path d="M9 10.5a6.5 6.5 0 1 0 10 0" stroke="#B8935A" stroke-width="1.2" stroke-linecap="round"></path></svg>
-<span style="display: flex; flex-direction: column; line-height: 1">
-<span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; letter-spacing: 0.01em">Airthorne</span>
-<span style="margin-top: 6px; font-size: 10px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #B9B2A5">Heating &amp; Air</span>
-</span>
-</a>
-<nav aria-label="Primary" style="display: flex; flex-wrap: wrap; gap: 40px; font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase">
-<a class="navlink" href="#services">Services</a>
-<a class="navlink" href="#standard">Our standard</a>
-<a class="navlink" href="#about">About</a>
-<a class="navlink" href="#contact">Contact</a>
-</nav>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
-<a class="navlink" href="tel:+13045550142" style="font-size: 14px; font-weight: 500; letter-spacing: 0.04em">(304) 555-0142</a>
-<a href="#contact" style="border: 1px solid #B8935A; color: #F4F1EB; text-decoration: none; font-size: 12px; font-weight: 600; padding: 14px 24px; letter-spacing: 0.18em; text-transform: uppercase">Book a consultation</a>
-</div>
-</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Airthorne Heating and Air, home">
+      <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#12263A"/><path d="M16 7v9" stroke="#F07B3F" stroke-width="2.4" stroke-linecap="round"/><path d="M10.5 11.5a8 8 0 1 0 11 0" stroke="#4FA3E8" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+      <span><b>Airthorne</b><small>Heating &amp; Air</small></span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#tuneup">Tune-ups</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+13045550142"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>(304) 555-0142</span></a>
+      <a class="btn btn-heat" href="#contact">Book service</a>
+    </div>
+  </div>
 </header>
 
-<div style="position: relative; flex: 1; display: flex; align-items: flex-end">
-<div style="max-width: 1360px; width: 100%; margin: 0 auto; padding: 140px 40px 72px; box-sizing: border-box">
-<p style="margin: 0 0 36px; display: flex; align-items: center; gap: 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #B8935A"><span aria-hidden="true" style="display: inline-block; width: 48px; height: 1px; background: #B8935A"></span>Beckley, West Virginia</p>
-<h1 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(64px, 10.5vw, 152px); line-height: 0.92; letter-spacing: -0.015em; max-width: 980px">Comfort,<br><span style="font-style: italic; color: #E9DFCB">engineered.</span></h1>
-<p style="margin: 44px 0 0; max-width: 500px; font-size: 19px; font-weight: 300; line-height: 1.7; color: #D8D1C4">Heating and cooling for the homes and businesses of southern West Virginia, installed with care and priced before we begin.</p>
-<div style="margin-top: 52px; display: flex; flex-wrap: wrap; align-items: center; gap: 36px">
-<a href="#contact" style="background: #B8935A; color: #0B141B; text-decoration: none; font-size: 12px; font-weight: 700; padding: 22px 38px; letter-spacing: 0.2em; text-transform: uppercase">Request a private quote</a>
-<a class="ulink" href="tel:+13045550199" style="color: #F4F1EB; font-size: 15px; font-weight: 400">24/7 emergency line — (304) 555-0199</a>
-</div>
-<div style="margin-top: 112px; padding-top: 28px; border-top: 1px solid rgba(244,241,235,0.16); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #B9B2A5">
-<span>NATE-certified technicians</span>
-<span>Upfront, fixed pricing</span>
-<span>Background-checked team</span>
-<span>Serving Raleigh County</span>
-</div>
-</div>
-</div>
+<main id="top">
+
+<section class="hero" aria-roledescription="carousel" aria-label="Airthorne highlights" style="padding:0">
+  <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+    <img src="images/slide-van.jpg" alt="An Airthorne service van parked in a homeowner's driveway" style="object-position:100% center" fetchpriority="high">
+    <div class="wrap">
+      <span class="tag"><i style="background:#3DDC84"></i>Local to Beckley for 15+ years</span>
+      <h1>In your driveway, not on hold.</h1>
+      <p>Honest heating and cooling from neighbors who answer their own phones and show up when they say they will.</p>
+      <div class="actions">
+        <a class="btn btn-heat" href="#contact">Get a free quote</a>
+        <a class="btn btn-ghost" href="tel:+13045550142">Call (304) 555-0142</a>
+      </div>
+    </div>
+  </div>
+  <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true">
+    <img src="images/slide-condenser.jpg" alt="A new outdoor air conditioning unit installed beside a stone-trimmed home" style="object-position:0% center" loading="lazy">
+    <div class="wrap">
+      <span class="tag"><i style="background:#4FA3E8"></i>Cooling</span>
+      <h2>Cool, quiet summers. Even in a West Virginia July.</h2>
+      <p>AC and heat pump systems sized right for your home, so they run quieter, last longer and cost less every month.</p>
+      <div class="actions">
+        <a class="btn btn-heat" href="#contact">Schedule AC service</a>
+        <a class="btn btn-ghost" href="#services">See cooling options</a>
+      </div>
+    </div>
+  </div>
+  <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true">
+    <img src="images/slide-thermostat.jpg" alt="A smart thermostat reading 72 degrees in a bright living room" style="object-position:100% center" loading="lazy">
+    <div class="wrap">
+      <span class="tag"><i style="background:#F07B3F"></i>Heating</span>
+      <h2>72° all winter, without the surprise bill.</h2>
+      <p>Furnace and heat pump repair, replacement and smart thermostat setup, priced up front before we pick up a tool.</p>
+      <div class="actions">
+        <a class="btn btn-heat" href="#tuneup">Book a furnace tune-up</a>
+        <a class="btn btn-ghost" href="#services">See heating options</a>
+      </div>
+    </div>
+  </div>
+  <div class="slider-ui">
+    <div class="wrap">
+      <div class="dots" role="group" aria-label="Choose slide">
+        <button class="dot" type="button" aria-label="Slide 1" aria-current="true"><span></span></button>
+        <button class="dot" type="button" aria-label="Slide 2"><span></span></button>
+        <button class="dot" type="button" aria-label="Slide 3"><span></span></button>
+      </div>
+      <div class="arrows">
+        <button class="arrow" type="button" data-dir="-1" aria-label="Previous slide"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="arrow" type="button" data-dir="1" aria-label="Next slide"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- STATEMENT + STATS -->
-<section style="max-width: 1360px; margin: 0 auto; padding: 176px 40px 160px">
-<p style="margin: 0 0 40px; text-align: center; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #7A5C2E">The Airthorne difference</p>
-<p style="margin: 0 auto; max-width: 1080px; text-align: center; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(34px, 4.2vw, 58px); line-height: 1.22; letter-spacing: -0.005em">We believe HVAC work should be <span style="font-style: italic; color: #7A5C2E">predictable</span>. You'll know the cost before we start, when we'll arrive, and that the job was done right when we leave.</p>
-<div style="margin: 120px auto 0; max-width: 1080px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border-top: 1px solid #CFC7B8; border-bottom: 1px solid #CFC7B8">
-<div style="padding: 44px 24px; text-align: center">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 88px; line-height: 1">15<span style="color: #7A5C2E">+</span></div>
-<div style="margin-top: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4F52">Years of service</div>
+<div class="trust">
+  <div class="wrap">
+    <div><span class="badge b-heat"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.4 7 22l5-3 5 3-1.2-8.6"/></svg></span><span>NATE-certified techs<small>Background-checked, too</small></span></div>
+    <div><span class="badge b-cool"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg></span><span>Upfront pricing<small>You approve it before we start</small></span></div>
+    <div><span class="badge b-heat"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span>24/7 emergency service<small>Nights, weekends, holidays</small></span></div>
+    <div><span class="badge b-cool"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18.2 22 12 18.1 5.8 22l1.7-7.6L2 9.6l7.1-.7z"/></svg></span><span>4.8 on Google<small>From local homeowners</small></span></div>
+  </div>
 </div>
-<div style="padding: 44px 24px; text-align: center; border-left: 1px solid #CFC7B8">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 88px; line-height: 1">4.8</div>
-<div style="margin-top: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4F52">Google rating</div>
-</div>
-<div style="padding: 44px 24px; text-align: center; border-left: 1px solid #CFC7B8">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 88px; line-height: 1">10K<span style="color: #7A5C2E">+</span></div>
-<div style="margin-top: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4F52">Homes &amp; businesses</div>
-</div>
-</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">What we do</span>
+        <h2>Heating and cooling, start to finish.</h2>
+      </div>
+      <p>From a thermostat that won't cooperate to a full system replacement, one call covers it.</p>
+    </div>
+    <div class="services">
+      <article class="card">
+        <div class="ph"><img src="images/air-conditioning.jpg" alt="Two technicians installing an air conditioning unit behind a house" loading="lazy"></div>
+        <div class="bd">
+          <span class="chip chip-cool">Cooling</span>
+          <h3>AC installation &amp; replacement</h3>
+          <p>Right-sized systems that keep the whole house even, not just the room by the thermostat.</p>
+          <a class="more" href="#contact">Get a quote <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph"><img src="images/heating.jpg" alt="A technician servicing a wall-mounted heating unit" loading="lazy"></div>
+        <div class="bd">
+          <span class="chip chip-heat">Heating</span>
+          <h3>Furnaces &amp; heat pumps</h3>
+          <p>Built for mountain winters. We'll tell you honestly whether to repair or replace.</p>
+          <a class="more" href="#contact">Get a quote <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph"><img src="images/repair.jpg" alt="Two technicians working on an outdoor HVAC unit" loading="lazy"></div>
+        <div class="bd">
+          <span class="chip chip-navy">Repair</span>
+          <h3>Diagnostics &amp; repair</h3>
+          <p>We find the real problem, explain it in plain English, and fix it without the upsell.</p>
+          <a class="more" href="#contact">Book a visit <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph"><img src="images/thermostat.jpg" alt="A homeowner adjusting a wall thermostat" loading="lazy"></div>
+        <div class="bd">
+          <span class="chip chip-navy">Maintenance</span>
+          <h3>Tune-ups &amp; air quality</h3>
+          <p>Yearly check-ups, smart thermostats and cleaner indoor air, so small issues stay small.</p>
+          <a class="more" href="#tuneup">See tune-ups <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>
 
-<!-- SERVICES: editorial, dark -->
-<section id="services" style="background: #0B141B; color: #F4F1EB">
-<div style="max-width: 1360px; margin: 0 auto; padding: 160px 40px 176px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 112px">
-<div>
-<p style="margin: 0 0 28px; display: flex; align-items: center; gap: 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #B8935A"><span aria-hidden="true" style="display: inline-block; width: 48px; height: 1px; background: #B8935A"></span>Services</p>
-<h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(48px, 6vw, 88px); line-height: 1; letter-spacing: -0.01em">Every system,<br><span style="font-style: italic; color: #E9DFCB">done properly.</span></h2>
-</div>
-<p style="margin: 0; max-width: 380px; font-weight: 300; color: #B9B2A5">From a single thermostat to a complete system replacement, every job receives the same attention to detail.</p>
-</div>
-
-<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 48px 96px; align-items: center">
-<div class="zoom"><img loading="lazy" src="images/air-conditioning.jpg" alt="Two technicians installing an air conditioning unit behind a house" style="display: block; width: 100%; aspect-ratio: 5 / 4; object-fit: cover; background: #1C2830"></div>
-<div style="max-width: 480px">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 20px; font-style: italic; color: #B8935A">No. 01</div>
-<h3 style="margin: 20px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05">Air conditioning</h3>
-<p style="margin: 28px 0 0; font-weight: 300; color: #C9C2B5">Correctly sized, quietly efficient AC and heat pump systems, installed cleanly and quoted in writing before any work begins.</p>
-<a class="ulink" href="#contact" style="display: inline-block; margin-top: 40px; color: #F4F1EB; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase">Explore cooling</a>
-</div>
-</article>
-
-<article style="margin-top: 144px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 48px 96px; align-items: center">
-<div style="max-width: 480px; justify-self: end">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 20px; font-style: italic; color: #B8935A">No. 02</div>
-<h3 style="margin: 20px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.05">Heating</h3>
-<p style="margin: 28px 0 0; font-weight: 300; color: #C9C2B5">Furnace and heat pump installation built for West Virginia winters: warm rooms, quiet operation and lower monthly bills.</p>
-<a class="ulink" href="#contact" style="display: inline-block; margin-top: 40px; color: #F4F1EB; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase">Explore heating</a>
-</div>
-<div class="zoom"><img loading="lazy" src="images/heating.jpg" alt="A technician servicing a wall-mounted heating unit" style="display: block; width: 100%; aspect-ratio: 5 / 4; object-fit: cover; background: #1C2830"></div>
-</article>
-
-<div style="margin-top: 144px; padding-top: 72px; border-top: 1px solid rgba(244,241,235,0.14); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 72px">
-<article>
-<div class="zoom"><img loading="lazy" src="images/repair.jpg" alt="Two technicians in uniform working on an outdoor HVAC unit" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: #1C2830"></div>
-<div style="margin-top: 36px; display: flex; align-items: baseline; gap: 20px">
-<span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 18px; font-style: italic; color: #B8935A">No. 03</span>
-<h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 38px; line-height: 1.1">Diagnostics &amp; repair</h3>
-</div>
-<p style="margin: 18px 0 0; max-width: 520px; font-weight: 300; color: #C9C2B5">We find the true cause, explain it plainly, and fix it, without selling you equipment you don't need.</p>
-</article>
-<article>
-<div class="zoom"><img loading="lazy" src="images/thermostat.jpg" alt="A homeowner adjusting a thermostat on the wall" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: #1C2830"></div>
-<div style="margin-top: 36px; display: flex; align-items: baseline; gap: 20px">
-<span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 18px; font-style: italic; color: #B8935A">No. 04</span>
-<h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 38px; line-height: 1.1">Care &amp; air quality</h3>
-</div>
-<p style="margin: 18px 0 0; max-width: 520px; font-weight: 300; color: #C9C2B5">Preventative maintenance plans, smart thermostat setup and indoor air quality assessments that keep systems running for years.</p>
-</article>
-</div>
-</div>
+<section id="tuneup" style="padding-top:0">
+  <div class="wrap">
+    <div class="season">
+      <div class="tx">
+        <span class="eyebrow">Fall tune-up season</span>
+        <h2>Beat the first cold snap.</h2>
+        <p>The first freezing night is when everyone's furnace gets tested at once. A quick tune-up now means you're not waiting in line later.</p>
+        <ul>
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Safety check of the burners, heat exchanger and carbon monoxide levels</li>
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Filter swap, electrical connections tightened, thermostat calibrated</li>
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>A straight answer on how many winters your system has left</li>
+        </ul>
+        <a class="btn btn-heat" href="#contact">Book my tune-up</a>
+      </div>
+      <div class="ph"><img src="images/team-install.jpg" alt="Two Airthorne technicians installing a heat pump inside a living room" loading="lazy"></div>
+    </div>
+  </div>
 </section>
 
-<!-- THE AIRTHORNE STANDARD -->
-<section id="standard" style="max-width: 1360px; margin: 0 auto; padding: 176px 40px">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px 96px; align-items: end; margin-bottom: 104px">
-<div>
-<p style="margin: 0 0 28px; display: flex; align-items: center; gap: 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #7A5C2E"><span aria-hidden="true" style="display: inline-block; width: 48px; height: 1px; background: #7A5C2E"></span>Our standard</p>
-<h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(48px, 6vw, 88px); line-height: 1; letter-spacing: -0.01em">The Airthorne<br><span style="font-style: italic; color: #7A5C2E">promise.</span></h2>
-</div>
-<p style="margin: 0; max-width: 440px; font-weight: 300; color: #4A4F52">Four commitments we make on every visit, whether it's a routine tune-up or a full replacement.</p>
-</div>
-<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); border-top: 1px solid #0B141B">
-<li style="padding: 44px 32px 8px 0">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 72px; line-height: 1; color: #CFC7B8">I</div>
-<h3 style="margin: 28px 0 14px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase">Price before work</h3>
-<p style="margin: 0; font-weight: 300; color: #4A4F52">A clear, written quote. No surprises on the final bill.</p>
-</li>
-<li style="padding: 44px 32px 8px 0">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 72px; line-height: 1; color: #CFC7B8">II</div>
-<h3 style="margin: 28px 0 14px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase">On-time arrival</h3>
-<p style="margin: 0; font-weight: 300; color: #4A4F52">A confirmed arrival window, and a call if anything changes.</p>
-</li>
-<li style="padding: 44px 32px 8px 0">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 72px; line-height: 1; color: #CFC7B8">III</div>
-<h3 style="margin: 28px 0 14px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase">Certified hands</h3>
-<p style="margin: 0; font-weight: 300; color: #4A4F52">NATE-certified, background-checked technicians from your community.</p>
-</li>
-<li style="padding: 44px 32px 8px 0">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 72px; line-height: 1; color: #CFC7B8">IV</div>
-<h3 style="margin: 28px 0 14px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase">Respect for your home</h3>
-<p style="margin: 0; font-weight: 300; color: #4A4F52">Floors protected, work areas cleaned, and a full walkthrough before we leave.</p>
-</li>
-</ol>
+<section id="about" style="padding-top:0">
+  <div class="wrap why">
+    <div class="ph"><img src="images/hero-handshake.jpg" alt="An Airthorne technician shaking hands with a homeowner after an install" loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Why Airthorne</span>
+      <h2>Fifteen years in. Still answering our own phones.</h2>
+      <p>Airthorne started with a simple idea: HVAC work should be predictable. You should know what it costs before we start, know when we're showing up, and know it was done right when we leave.</p>
+      <p>Our technicians are NATE-certified, background-checked, and live in the same towns they work in. Most of our work still comes from neighbors telling neighbors.</p>
+      <div class="stats">
+        <div class="stat"><b>15+</b><span>years serving southern WV</span></div>
+        <div class="stat"><b>4.8★</b><span>average Google rating</span></div>
+        <div class="stat"><b>10K+</b><span>homes &amp; businesses</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- TESTIMONIAL -->
-<section style="background: #E9E3D8">
-<div style="max-width: 1120px; margin: 0 auto; padding: 168px 40px; text-align: center">
-<div style="display: flex; justify-content: center; gap: 6px; margin-bottom: 48px" aria-label="Five star review" role="img">
-<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18.2 22 12 18.1 5.8 22l1.7-7.6L2 9.6l7.1-.7z" fill="#7A5C2E"></path></svg>
-<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18.2 22 12 18.1 5.8 22l1.7-7.6L2 9.6l7.1-.7z" fill="#7A5C2E"></path></svg>
-<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18.2 22 12 18.1 5.8 22l1.7-7.6L2 9.6l7.1-.7z" fill="#7A5C2E"></path></svg>
-<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18.2 22 12 18.1 5.8 22l1.7-7.6L2 9.6l7.1-.7z" fill="#7A5C2E"></path></svg>
-<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18.2 22 12 18.1 5.8 22l1.7-7.6L2 9.6l7.1-.7z" fill="#7A5C2E"></path></svg>
-</div>
-<blockquote style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.18; letter-spacing: -0.005em">“Our AC went out in the middle of July and Airthorne had someone out the same day. Professional, fast, and they didn't try to <span style="font-style: italic">upsell us</span> on anything we didn't need.”</blockquote>
-<div style="margin: 56px auto 0; width: 48px; height: 1px; background: #7A5C2E"></div>
-<p style="margin: 28px 0 0; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: #4A4F52">Danielle M. · Oak Hill, WV</p>
-</div>
+<section id="reviews" class="reviews-bg">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">Reviews</span>
+        <h2>What your neighbors say.</h2>
+      </div>
+      <span class="rating-pill"><span class="stars" aria-hidden="true">★★★★★</span>4.8 average on Google</span>
+    </div>
+    <div class="reviews">
+      <article class="review">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <h3>“Same day, middle of July.”</h3>
+        <p>Our AC went out in the middle of July and Airthorne had someone out the same day. Professional, fast, and didn't try to upsell us on anything we didn't need.</p>
+        <div class="who"><span class="av" style="background:#2F7FC9">DM</span><span><b>Danielle M.</b><small>Beckley, WV</small></span></div>
+      </article>
+      <article class="review">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <h3>“They treated our home like their own.”</h3>
+        <p>From the first call to the final inspection, everything felt seamless. The team worked efficiently and respected our space.</p>
+        <div class="who"><span class="av" style="background:#B84A14">LD</span><span><b>Lena D.</b><small>Oak Hill, WV</small></span></div>
+      </article>
+      <article class="review">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <h3>“No surprises on the bill.”</h3>
+        <p>They installed a new heat pump and walked us through everything beforehand. Clean install, and the price was exactly what they quoted.</p>
+        <div class="who"><span class="av" style="background:#12263A">MS</span><span><b>Megan S.</b><small>Shady Spring, WV</small></span></div>
+      </article>
+    </div>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" style="max-width: 1360px; margin: 0 auto; padding: 176px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 72px 112px; align-items: center">
-<div class="zoom"><img loading="lazy" src="images/team-install.jpg" alt="Two Airthorne technicians installing a heat pump inside a modern living room" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 22% center; background: #CFC7B8"></div>
-<div style="max-width: 520px">
-<p style="margin: 0 0 28px; display: flex; align-items: center; gap: 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #7A5C2E"><span aria-hidden="true" style="display: inline-block; width: 48px; height: 1px; background: #7A5C2E"></span>About Airthorne</p>
-<h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(48px, 5.5vw, 80px); line-height: 1; letter-spacing: -0.01em">Neighbors telling <span style="font-style: italic; color: #7A5C2E">neighbors.</span></h2>
-<p style="margin: 40px 0 0; font-weight: 300; color: #4A4F52">Our technicians are NATE-certified, background-checked, and live in the same communities they serve. Fifteen years in, most of our work still comes from word of mouth.</p>
-<p style="margin: 22px 0 0; font-weight: 300; color: #4A4F52">From a single thermostat swap to a full system replacement, we bring the same care to every home.</p>
-</div>
+<section>
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">Where we work</span>
+      <div class="head" style="margin-bottom:0"><h2>Raleigh County and the New River Valley.</h2></div>
+      <div class="towns">
+        <span>Beckley</span><span>Oak Hill</span><span>Fayetteville</span><span>Shady Spring</span><span>Daniels</span><span>Crab Orchard</span><span>Mount Hope</span>
+      </div>
+      <p class="area-note">Don't see your town? Call anyway. If we can get to you, we will.</p>
+    </div>
+    <div id="faq">
+      <span class="eyebrow">Common questions</span>
+      <div class="head" style="margin-bottom:28px"><h2>Good to know.</h2></div>
+      <details>
+        <summary>How often should my system be serviced?</summary>
+        <p>Once a year for each side: your AC in the spring and your furnace or heat pump in the fall. Heat pumps do both jobs, so twice a year keeps them healthiest.</p>
+      </details>
+      <details>
+        <summary>Why does my heat pump feel like it's blowing cool air?</summary>
+        <p>Heat pump air is warm, but not as hot as a furnace's, so it can feel cool on your hand. It also runs short defrost cycles in freezing weather. If rooms aren't reaching the set temperature, give us a call.</p>
+      </details>
+      <details>
+        <summary>How long does a new system install take?</summary>
+        <p>Most replacements are finished in a single day. We protect your floors, haul away the old equipment, and walk you through the new system before we leave.</p>
+      </details>
+      <details>
+        <summary>Do you offer financing?</summary>
+        <p>Yes. We accept cash, check and credit cards, and we offer financing on new systems. Ask about it when we quote your job.</p>
+      </details>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" style="background: #0B141B; color: #F4F1EB">
-<div style="max-width: 1360px; margin: 0 auto; padding: 168px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 80px 112px">
-<div>
-<p style="margin: 0 0 28px; display: flex; align-items: center; gap: 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #B8935A"><span aria-hidden="true" style="display: inline-block; width: 48px; height: 1px; background: #B8935A"></span>Private consultation</p>
-<h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(48px, 6vw, 88px); line-height: 1; letter-spacing: -0.01em">Ready when<br><span style="font-style: italic; color: #E9DFCB">you are.</span></h2>
-<p style="margin: 36px 0 0; max-width: 420px; font-weight: 300; color: #B9B2A5">Tell us about your home. We'll reply within one business day to arrange a visit at a time that suits you.</p>
-<a href="tel:+13045550142" style="display: inline-block; margin-top: 64px; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(36px, 4vw, 52px); color: #F4F1EB; text-decoration: none">(304) 555-0142</a>
-<dl style="margin: 48px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; font-size: 15px; font-weight: 300">
-<div><dt style="font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #8F9AA3">24/7 emergency</dt><dd style="margin: 10px 0 0">(304) 555-0199</dd></div>
-<div><dt style="font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #8F9AA3">Email</dt><dd style="margin: 10px 0 0">hello@airthornehvac.com</dd></div>
-<div><dt style="font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #8F9AA3">Hours</dt><dd style="margin: 10px 0 0">Mon–Fri 7am–6pm<br>Saturday 8am–2pm</dd></div>
-<div><dt style="font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #8F9AA3">Office</dt><dd style="margin: 10px 0 0">1425 Somewhere Rd<br>Beckley, WV 25801</dd></div>
-</dl>
-</div>
-<form style="background: #F4F1EB; color: #0B141B; padding: 64px 56px; display: flex; flex-direction: column; gap: 28px; align-self: start">
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1.1">Request a quote</div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<label for="q-name" style="font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4F52">Full name</label>
-<input id="q-name" class="field" type="text">
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 28px">
-<div style="display: flex; flex-direction: column; gap: 4px">
-<label for="q-phone" style="font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4F52">Phone</label>
-<input id="q-phone" class="field" type="tel">
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<label for="q-email" style="font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4F52">Email</label>
-<input id="q-email" class="field" type="email">
-</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<label for="q-service" style="font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4F52">How can we help?</label>
-<select id="q-service" class="field">
-<option>New system or replacement</option>
-<option>Repair</option>
-<option>Maintenance plan</option>
-<option>Something else</option>
-</select>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<label for="q-msg" style="font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4F52">Details (optional)</label>
-<textarea id="q-msg" class="field" rows="3" style="resize: vertical"></textarea>
-</div>
-<button type="button" style="margin-top: 16px; background: #0B141B; color: #F4F1EB; border: none; padding: 22px 32px; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; cursor: pointer">Send request</button>
-<p style="margin: 0; font-size: 12px; color: #5B5548">By submitting, you agree to our Privacy Policy.</p>
-</form>
-</div>
+<section id="contact" class="contact">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Free quotes</span>
+      <h2>Let's get your home comfortable.</h2>
+      <p class="lead">Tell us what's going on. We'll call you back within one business day, or right away if it's an emergency.</p>
+      <a class="big-phone" href="tel:+13045550142"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FF9C6B" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(304) 555-0142</a>
+      <div class="info">
+        <div><b>24/7 emergency</b>(304) 555-0199</div>
+        <div><b>Email</b>hello@airthornehvac.com</div>
+        <div><b>Office hours</b>Mon–Fri 7am–6pm<br>Sat 8am–2pm</div>
+        <div><b>Shop</b>1425 Somewhere Rd<br>Beckley, WV 25801</div>
+      </div>
+    </div>
+    <form class="quote" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks! This is a demo form.';">
+      <h3>Request a free quote</h3>
+      <div class="f">
+        <span style="font-family:'Archivo',sans-serif;font-weight:600;font-size:14px;color:var(--navy)" id="need-label">What do you need?</span>
+        <div class="seg" role="radiogroup" aria-labelledby="need-label">
+          <input type="radio" name="need" id="n-heat" checked><label for="n-heat"><span style="color:var(--heat)" aria-hidden="true">●</span>Heating</label>
+          <input type="radio" name="need" id="n-cool"><label for="n-cool"><span style="color:var(--cool)" aria-hidden="true">●</span>Cooling</label>
+          <input type="radio" name="need" id="n-other"><label for="n-other">Not sure</label>
+        </div>
+      </div>
+      <div class="f"><label for="q-name">Your name</label><input id="q-name" type="text" autocomplete="name"></div>
+      <div class="row">
+        <div class="f"><label for="q-phone">Phone</label><input id="q-phone" type="tel" autocomplete="tel"></div>
+        <div class="f"><label for="q-zip">ZIP code</label><input id="q-zip" type="text" inputmode="numeric" autocomplete="postal-code"></div>
+      </div>
+      <div class="f"><label for="q-msg">What's going on? (optional)</label><textarea id="q-msg" rows="3" placeholder="e.g. Furnace is making a banging noise when it starts up"></textarea></div>
+      <button class="btn btn-heat" type="submit">Request my quote</button>
+      <small>By submitting, you agree to our Privacy Policy. We never share your number.</small>
+    </form>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer style="background: #070D12; color: #B9B2A5; font-size: 14px; font-weight: 300">
-<div style="max-width: 1360px; margin: 0 auto; padding: 96px 40px 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 56px">
-<div>
-<div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 40px; line-height: 1; color: #F4F1EB">Airthorne</div>
-<div style="margin-top: 10px; font-size: 10px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase">Heating &amp; Air</div>
-<p style="margin: 28px 0 0; max-width: 280px">Beckley, Oak Hill, Fayetteville, Shady Spring and the New River Valley.</p>
-</div>
-<div>
-<div style="font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #8F9AA3; margin-bottom: 20px">Services</div>
-<p style="margin: 0; line-height: 2">Air conditioning<br>Heating<br>Diagnostics &amp; repair<br>Care &amp; air quality</p>
-</div>
-<div>
-<div style="font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #8F9AA3; margin-bottom: 20px">Contact</div>
-<p style="margin: 0; line-height: 2">(304) 555-0142<br>Emergency (304) 555-0199<br>hello@airthornehvac.com</p>
-</div>
-<div>
-<div style="font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #8F9AA3; margin-bottom: 20px">Visit</div>
-<p style="margin: 0; line-height: 2">1425 Somewhere Rd<br>Beckley, WV 25801</p>
-</div>
-</div>
-<div style="max-width: 1360px; margin: 0 auto; padding: 28px 40px 44px; border-top: 1px solid #1C2830; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 12px; letter-spacing: 0.08em; color: #8F9AA3">
-<span>© 2026 Airthorne Heating &amp; Air</span>
-<span>Privacy Policy</span>
-</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="logo" href="#top"><svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1B3550"/><path d="M16 7v9" stroke="#F07B3F" stroke-width="2.4" stroke-linecap="round"/><path d="M10.5 11.5a8 8 0 1 0 11 0" stroke="#4FA3E8" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg><span><b>Airthorne</b><small>Heating &amp; Air</small></span></a>
+        <p style="margin-top:18px;max-width:260px">Local heating and cooling for Beckley and the New River Valley.</p>
+      </div>
+      <div><h4>Services</h4><p>AC installation<br>Furnaces &amp; heat pumps<br>Repair<br>Tune-ups &amp; air quality</p></div>
+      <div><h4>Call</h4><p>(304) 555-0142<br>Emergency (304) 555-0199</p></div>
+      <div><h4>Visit</h4><p>1425 Somewhere Rd<br>Beckley, WV 25801</p></div>
+    </div>
+    <div class="bottom"><span>© 2026 Airthorne Heating &amp; Air</span><span>Privacy Policy</span></div>
+  </div>
 </footer>
 
-</div>
+<a class="btn btn-heat mobile-call" href="tel:+13045550142">Call now: (304) 555-0142</a>
+
+<script>
+(function(){
+  var hero=document.querySelector('.hero');
+  var slides=[].slice.call(hero.querySelectorAll('.slide'));
+  var dots=[].slice.call(hero.querySelectorAll('.dot'));
+  var i=0,timer=null,reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function show(n){
+    i=(n+slides.length)%slides.length;
+    slides.forEach(function(s,k){var on=k===i;s.classList.toggle('is-active',on);s.setAttribute('aria-hidden',on?'false':'true');
+      s.querySelectorAll('a').forEach(function(a){a.tabIndex=on?0:-1;});});
+    dots.forEach(function(d,k){if(k===i){d.removeAttribute('aria-current');void d.offsetWidth;d.setAttribute('aria-current','true');}else d.removeAttribute('aria-current');});
+  }
+  function start(){if(reduce)return;stop();timer=setInterval(function(){show(i+1);},6500);hero.classList.remove('paused');}
+  function stop(){clearInterval(timer);timer=null;hero.classList.add('paused');}
+  dots.forEach(function(d,k){d.addEventListener('click',function(){show(k);start();});});
+  hero.querySelectorAll('.arrow').forEach(function(b){b.addEventListener('click',function(){show(i+(+b.dataset.dir));start();});});
+  hero.addEventListener('mouseenter',stop);hero.addEventListener('mouseleave',start);
+  hero.addEventListener('focusin',stop);hero.addEventListener('focusout',start);
+  show(0);start();
+})();
+</script>
 </body>
 </html>
